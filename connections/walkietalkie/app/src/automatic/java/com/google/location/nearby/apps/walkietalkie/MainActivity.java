@@ -8,13 +8,6 @@ import android.media.AudioManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.ParcelFileDescriptor;
-import android.support.annotation.ColorInt;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.UiThread;
-import android.support.annotation.WorkerThread;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.view.ViewCompat;
 import android.text.SpannableString;
 import android.text.format.DateFormat;
 import android.text.method.ScrollingMovementMethod;
@@ -24,6 +17,15 @@ import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.UiThread;
+import androidx.annotation.WorkerThread;
+import androidx.core.content.ContextCompat;
+import androidx.core.view.ViewCompat;
+
 import com.google.android.gms.nearby.connection.ConnectionInfo;
 import com.google.android.gms.nearby.connection.Payload;
 import com.google.android.gms.nearby.connection.Strategy;
@@ -124,7 +126,8 @@ public class MainActivity extends ConnectionsActivity {
       };
 
   /** For recording audio as the user speaks. */
-  @Nullable private AudioRecorder mRecorder;
+  @Nullable
+  private AudioRecorder mRecorder;
 
   /** For playing audio from other users nearby. */
   @Nullable private AudioPlayer mAudioPlayer;

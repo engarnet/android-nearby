@@ -2,8 +2,10 @@ package com.google.location.nearby.apps.walkietalkie;
 
 import android.os.Handler;
 import android.os.Message;
-import android.support.annotation.IntDef;
 import android.view.KeyEvent;
+
+import androidx.annotation.IntDef;
+
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.HashSet;

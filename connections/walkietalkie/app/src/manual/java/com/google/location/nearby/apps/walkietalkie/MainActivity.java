@@ -15,12 +15,6 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.ParcelFileDescriptor;
 import android.os.Vibrator;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.UiThread;
-import android.support.annotation.WorkerThread;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.view.ViewCompat;
 import android.text.SpannableString;
 import android.text.format.DateFormat;
 import android.text.method.ScrollingMovementMethod;
@@ -30,6 +24,14 @@ import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.UiThread;
+import androidx.annotation.WorkerThread;
+import androidx.core.content.ContextCompat;
+import androidx.core.view.ViewCompat;
+
 import com.google.android.gms.nearby.connection.ConnectionInfo;
 import com.google.android.gms.nearby.connection.Payload;
 import com.google.android.gms.nearby.connection.Strategy;
@@ -103,7 +105,8 @@ public class MainActivity extends ConnectionsActivity implements SensorEventList
   private TextView mCurrentStateView;
 
   /** An animator that controls the animation from previous state to current state. */
-  @Nullable private Animator mCurrentAnimator;
+  @Nullable
+  private Animator mCurrentAnimator;
 
   /** A running log of debug messages. Only visible when DEBUG=true. */
   private TextView mDebugLogView;

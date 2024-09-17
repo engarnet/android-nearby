@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    namespace "com.google.location.nearby.apps.walkietalkie"
+    compileSdkVersion 34
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 28
+        minSdkVersion 23
+        targetSdkVersion 34
         versionCode 1
         versionName "1.0"
-        multiDexEnabled true
     }
 
     flavorDimensions "mode"
@@ -16,7 +16,6 @@ android {
         manual {
             dimension "mode"
             applicationId "com.google.location.nearby.apps.walkietalkie.manual"
-            dimension 'default'
         }
         automatic {
             dimension "mode"
@@ -27,10 +26,8 @@ android {
 }
 
 dependencies {
-    implementation 'com.google.android.gms:play-services-nearby:16.0.0'
+    implementation 'com.google.android.gms:play-services-nearby:19.3.0'
 
-    implementation 'com.android.support:support-v4:28.0.0'
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
 }
 
